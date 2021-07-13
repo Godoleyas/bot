@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="Searchloginapp">
+  <head>
+    <meta charset="utf-8">
+    <title>Login/Register | Brand Name</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='lcss/style.css') }}">
+    <script src="{{ url_for('static', filename='angular/angular.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='angular/angular.min.js') }}"></script>
+  </head>
+  <body ng-controller="SearchloginappController" style="background-color: seashell;">
+    <div id="nav">
+      <a href="index.html" id="brandname"><h1>Brand Name</h1></a>
+      <ul id="navbarbuttons">
+        <a class="login" href="/Login/"><li>Login</li></a>
+        <a href="#aboutus"><li>Why Us?</li></a>
+      </ul>
+    </div>
+    <div style="width: 100%; background-color: seashell;">
+    <p style="background-color: skyblue; padding: 40px; color:sienna;">
+        <h2>Please use the following code to <a href="/signup">signup</a>  for your account. in case of any issues, please  <a href="/support">contact support!</a> 
+        </h2>
+        <br>
+        <h2>Please note that this code is only valid for one use. Do not share it with anyone!</h2>
+
+    <h2>{{code}}</h2>
+    </p>
+     </div>
+    <div class="aboutus", id="aboutus">
+        <br>
+        <h1 class="aboutusmain">The Best Telegram Search Engine!</h1>
+        <span class="aboutustxt">
+        Search Telegram using hundreds of keywords and get thousands of results. Returns Groups, Supergroups and channels!  Best part is, its only 100rs!
+        </span>
+        <br><br><br>
+        <h1 class="aboutusmain">Why Use this tool?</h1>
+    
+        <span class="aboutustxt">A typical search on Telegram with any keyword gives you a limited number of results, most often about three. But if you add a letter, for example keyword + a you get more results. Our tool takes your keyword and searches Telegram with 500+ keywords and gives you all the results using a complex algorithm!</span>
+        <br><br><br>
+        <h1 class="contactmain">Contact us</h1><br><br><br>
+        <span class="contacttext">+1 409 444 444</span><br><br>
+        <span class="contacttext">mail@example.com</span><br><br>
+        <span class="contacttext">12 apple street lane two</span><br><br>
+        <a href="www.webdevchat.com" class="contacttext">Our Developers</a><br><br>
+    </div>
+    </div>
+    <button onclick="topFunction()" id="Scrollbtn" title="Go to top">Top</button>
+    
+    <script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
+    
+    </body>

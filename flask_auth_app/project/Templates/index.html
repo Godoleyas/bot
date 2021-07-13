@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!--<script src="{{url_for('static', filename='angular/angular.min.js')}}"></script>
+  <script src="{{url_for('static', filename='angular/app.js')}}"></script>*/ -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='/css/col.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">
+ 
+  
+</head>
+<body>
+
+  <div id="nav">
+    {% block title %}<a href="index.html" id="brandname"><h1>Yosemite Infotech</h1></a>
+    <ul id="navbarbuttons">
+      <a class="login" href="/Login/"><li>Login</li></a>
+      <a href="/paytm"><li>Go pro</li></a>
+    </ul>
+  </div>
+  {%endblock%}
+  {%block main%}
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- Tele-horizontal -->
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-5962612951387819"
+       data-ad-slot="4217950609"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  
+  <!-- Hero Section -->
+  <div class="head">
+    <h1 class="main-heading">Telegram Group Search Tool</h1>
+    <br>
+    <h2>Find Your Desired Telegram Channel</h2>
+  </div>
+  <!-- Main  Div End -->
+
+<h3 style="color: salmon" id="showingresult">{{ search2 }}</h3>
+<br>
+  <!-- This Div Contains The SearchBar -->
+  <form class="example" method='POST' action="/api/v1/results">
+  <input type="text" placeholder="Search.." name="query">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
+  <!-- SearchBar End -->
+
+
+  <!-- Divs With Class Main Divs Will Be containing Page Data -->
+  {% if reslist %}
+  <div class="ResultDiv" style="display: {{ display }}; border: 4px solid white;">
+    <h3 id="loginstatus" style="margin-top: 5%;">Login to see more results!</h3>
+    <br>
+    <table id="table" style="font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;">
+      <tr>
+      <th id="theader" style="padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #502c6c;
+      color: white;">
+      Name
+    </th>
+      <th id="theader" style="padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #502c6c;
+      color: white;">Username</th>
+      <th id="theader" style="padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #502c6c;
+      color: white;">Member Count</th>
+      </tr>
+      
+      <br>
+      {% for i in reslist %}
+        <tr id="trow" style="padding:15px;
+        padding-top:10px;
+        padding-bottom:10px;
+        text-align: left;
+        background-color:#ececec;
+        border: 1px solid black;">
+          {% for j in i %}
+          <td id="cell", style="padding-top: 7px;
+          padding-bottom: 7px;">{{ j }}</td>
+          {% endfor %}
+        </tr>
+    {% endfor %}
+  </table>
+  
+  </div>
+  {% endif %}
+<br><br><br><br><br>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Tele-horizontal -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5962612951387819"
+     data-ad-slot="4217950609"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<br><br><br><br>
+
+  <!-- Main  Div End -->
+  <div class="aboutus", id="aboutus">
+    <br>
+    <h1 class="aboutusmain">The Best Telegram Search Engine!</h1>
+    <span class="aboutustxt">
+    Search Telegram using hundreds of keywords and get thousands of results. Returns Groups, Supergroups and channels!  Best part is, its only 100rs!
+    </span>
+    <br><br><br>
+    <h1 class="aboutusmain">Why Use this tool?</h1>
+
+    <span class="aboutustxt">A typical search on Telegram with any keyword gives you a limited number of results, most often about three. But if you add a letter, for example keyword + a you get more results. Our tool takes your keyword and searches Telegram with 500+ keywords and gives you all the results using a complex algorithm!</span>
+    <br><br><br>
+    <h1 class="contactmain">Contact us</h1><br><br><br>
+    <span class="contacttext">+1 409 444 444</span><br><br>
+    <span class="contacttext">mail@example.com</span><br><br>
+    <span class="contacttext">12 apple street lane two</span><br><br>
+    <a href="www.webdevchat.com" class="contacttext">Our Developers</a><br><br>
+</div>
+</div>
+<button onclick="topFunction()" id="Scrollbtn" title="Go to top">Top</button>
+
+<script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+{%endblock%}
+</body>
+
+</html>

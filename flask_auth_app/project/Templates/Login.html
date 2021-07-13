@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html ng-app="Searchloginapp">
+  <head>
+    <meta charset="utf-8">
+    <title>Login/Register | Brand Name</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='lcss/style.css') }}">
+    <script src="{{ url_for('static', filename='angular/angular.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='angular/angular.min.js') }}"></script>
+  </head>
+  <body ng-controller="SearchloginappController">
+    <div id="nav">
+      <a href="index.html" id="brandname"><h1>Brand Name</h1></a>
+      <ul id="navbarbuttons">
+        <a class="login" href="/Login/"><li>Login</li></a>
+        <a href="#aboutus"><li>Why Us?</li></a>
+      </ul>
+    </div>
+    <div class="main">
+		<div class="card">
+			<div class="card-title">
+				<h3><i class="fa fa-user-circle-o" aria-hidden="true"></i> User <span id="action_title">Login</span></h3>
+			</div>
+			<div class="card-body">
+				<div class="card-body-top">
+					<button id="login" class="btn" name="login" onclick="login()">Login</button>
+					<button id="register" class="btn" name="register" onclick="register()">Register</button>
+					<div id="pointer-btn"></div>
+				</div>
+				<div class="card-body-login">
+					<form id="login-form" action="/Login/" method="POST">
+						<input class="input-form" type="email" placeholder="Enter your username" name="email" required><br><br>
+						<input class="input-form" type="password" placeholder="Enter your password" name="password" required><br><br><br>
+						<input class="submit-form" type="submit" value="Login">
+					</form>
+					<form id="register-form" action="/paytm" method="POST">
+						<input class="input-form" type="name" placeholder="Enter your preferred username" name="username" required><br><br>
+						<input class="input-form" type="code" placeholder="Enter your code" name="code" required><br><br>
+						<input class="input-form" type="password" placeholder="Enter your password" name="password" required><br><br>
+						<p class="input-form">Get your code from <a href="/paytm">this page</p>
+						<br><br>
+						<input class="submit-form" type="submit" value="Register">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		var x = document.getElementById("login-form");
+		var y = document.getElementById("register-form");
+		var z = document.getElementById("pointer-btn");
+		var l = document.getElementById("login");
+		var r = document.getElementById("register");
+		var ac = document.getElementById("action_title");
+
+		function register(){
+			x.style.left = "-450px";
+			y.style.left = "25px";
+			z.style.left = "215px";
+			l.style.color = "#848484";
+			r.style.color = "#00ffc3";
+			ac.textContent = "Register";
+		}
+
+		function login(){
+			x.style.left = "25px";
+			y.style.left = "450px";
+			z.style.left = "30px";
+			l.style.color = "#00ffc3";
+			r.style.color = "#848484";
+			ac.textContent = "Login";
+		}
+	</script>
+    <script  src="{{ url_for('static', filename='angular/loginapp.js') }}"></script>
+  </body>
+</html>

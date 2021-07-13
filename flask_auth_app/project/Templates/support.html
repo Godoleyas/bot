@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact form</title>
+    <script src="flask_auth_app/project/static/angular/angular.min.js"></script>
+    <script src="flask_auth_app/project/static/angular/app.js"></script>
+    <link rel="stylesheet" href="flask_auth_app/project/static/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <style>
+      html, body {
+      min-height: 100%;
+      padding: 0;
+      margin: 0;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 14px;
+      color: #666;
+      }
+      h1 {
+      margin: 0 0 20px;
+      font-weight: 400;
+      color: #1c87c9;
+      }
+      p {
+      margin: 0 0 5px;
+      }
+      .main-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #1c87c9;
+      }
+      form {
+      padding: 25px;
+      margin: 25px;
+      box-shadow: 0 2px 5px #f5f5f5; 
+      background: #f5f5f5; 
+      }
+      .fas {
+      margin: 25px 10px 0;
+      font-size: 72px;
+      color: #fff;
+      }
+      .fa-envelope {
+      transform: rotate(-20deg);
+      }
+      .fa-at , .fa-mail-bulk{
+      transform: rotate(10deg);
+      }
+      input, textarea {
+      width: calc(100% - 18px);
+      padding: 8px;
+      margin-bottom: 20px;
+      border: 1px solid #1c87c9;
+      outline: none;
+      }
+      input::placeholder {
+      color: #666;
+      }
+      button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background: #1c87c9; 
+      font-size: 16px;
+      font-weight: 400;
+      color: #fff;
+      }
+      button:hover {
+      background: #2371a0;
+      }    
+      #brandname {
+      color: rgb(216, 206, 206);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: 300;
+      position: absolute;
+      top: 25px;
+      left: 9%;
+      text-decoration: none;
+      }
+      #nav {
+      width: 100%;
+      background-color: transparent;
+      height: 100px;
+      margin-left: 1.5%;
+      position: relative;
+      }
+      a li {
+      font-family: 'Roboto Condensed', sans-serif;
+
+      }
+      #navbarbuttons {
+        display: flex;
+        font-size: 2em;
+        list-style: none;
+      }
+
+      #navbarbuttons a:nth-child(1) {
+        margin-right: 4%;
+      }
+
+      #navbarbuttons a {
+        color: darkgoldenrod;
+        text-decoration: none;
+        position: relative;
+        left: 49%;
+        margin-top: 25px;
+        margin-right: 4%;
+        border: 1px solid none;
+        border-radius: 15px;
+        padding: 10px;
+      }
+
+      #navbarbuttons a {
+        transition: 0.8s;
+      }
+
+      #navbarbuttons a:hover, #navbarbuttons a:active {
+        background-color: thistle;
+        color:  #502c6c;
+      }
+
+      @media (min-width: 568px) {
+      .main-block {
+      flex-direction: row;
+      }
+      .left-part, form {
+      width: 50%;
+      }
+      .fa-envelope {
+      margin-top: 0;
+      margin-left: 20%;
+      }
+      .fa-at {
+      margin-top: -10%;
+      margin-left: 65%;
+      }
+      .fa-mail-bulk {
+      margin-top: 2%;
+      margin-left: 28%;
+      }
+
+      }
+    </style>
+  </head>
+  <body>
+    <div id="nav">
+        <a href="index.html" id="brandname"><h1>Yosemite Infotech</h1></a>
+        <ul id="navbarbuttons">
+          <a class="login" href="Login/"><li>Login</li></a>
+          <a href="buy-page.html"><li>Buy Now</li></a>
+          <a href="support.html"><li>Help</li></a>
+          <a href="#aboutus"><li>Why Us?</li></a>
+        </ul>
+      </div>
+    
+    <div class="main-block">
+      <div class="left-part">
+        <i class="fas fa-envelope"></i>
+        <i class="fas fa-at"></i>
+        <i class="fas fa-mail-bulk"></i>
+      </div>
+      <form action="/">
+        <h1>Contact Us</h1>
+        <div class="info">
+          <input class="fname" type="text" name="name" placeholder="Full name">
+          <input type="text" name="email" placeholder="Email">
+          <input type="text" name="number" placeholder="Phone number">
+        </div>
+        <p>Message (Please Explain your Issue)</p>
+        <div>
+          <textarea rows="4" name="message"></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

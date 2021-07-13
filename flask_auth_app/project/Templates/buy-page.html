@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cta-Page</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='/css/style-2.css') }}">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/c1720c6a08.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="Header-Section">
+        <div class="title-text">
+            <br>
+            <h1 id="toptext">Become A Super User</h1>
+            <br>
+            <h1 id="subtext"><i class="fas fa-thumbs-up"></i> Go Pro Now</h1>
+            <br><br>
+            <p id="paragraph1">With over 300 keywords, our tool is guaranteed to get you the most results. <br> Want a way to search conveniently? <br> Go pro today!</p>
+        </div>
+        <div class="features">
+            <ul class="list">
+                <li style="list-style-type: none;"><i class="fas fa-check-circle" style="color: green;"> </i> Get Full Access To The Tool</li>
+                <li style="list-style-type: none;"><i class="fas fa-check-circle" style="color: green;"> </i> Over 1000 results per search! </li>
+                <li style="list-style-type: none;"><i class="fas fa-check-circle" style="color: green;"> </i> No Hidden Fees </li>
+            </ul>
+            <ul class="list">
+                <li style="list-style-type: none;"><i class="fas fa-check-circle" style="color: green;"> </i> Premium Benefits</li>
+                <li style="list-style-type: none;"><i class="fas fa-check-circle" style="color: green;"> </i> No limits on searches </li>
+                <li style="list-style-type: none;"><i class="fas fa-check-circle" style="color: green;"> </i> No Hidden Fees </li>
+            </ul>
+        </div>
+        <div class="cta">
+            <h2>So What Are You Waiting For Now?</h2>
+            <form action="/paytm_checkout" method="POST">
+
+                <input type="hidden" name="param1" value="val" />
+                <input type="hidden" name="param2" value="val2" />
+                
+                <button class="buy-now" type="submit"><i class="fas fa-shopping-cart"></i> Buy Now</button>
+                </form>
+            
+        </div>
+    </div>
+</body>
+</html>
