@@ -1,6 +1,0 @@
-quart
-Flask-mail
-werkzeug
-requests
-telethon
-mysql-connector
